@@ -1,9 +1,10 @@
 Mediapackapp::Application.routes.draw do
 
+  devise_for :users
   root 'welcome#home'
-  #  get 'plans' => 'welcome#plans'
-  #  get 'terms' => 'welcome#terms'
-  #  get 'guides' => 'welcome#guides'
+    get 'plans' => 'welcome#plans'
+    get 'terms' => 'welcome#terms'
+    get 'guides' => 'welcome#guides'
     
     match ':controller(/:action(/:id))', :via => :get
     

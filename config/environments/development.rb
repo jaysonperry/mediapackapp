@@ -30,4 +30,7 @@ Mediapackapp::Application.configure do
   # To make bootstrap work
   #config.serve_static_assets = false
   
+  # for devise to work
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
 end
