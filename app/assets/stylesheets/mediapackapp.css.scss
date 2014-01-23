@@ -1,0 +1,297 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
+
+// Entreuse Application Custom Styling based on Bootstrap-sass
+//
+
+
+$brand-primary: #005684;
+$border-radius-base: 6px;
+$body-bg: rgba( 44, 62, 88, 1 ); // #2c3e50
+$text-color: #262626;
+// basic typography
+$font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-monospace: "Lucida Console", Monaco, monospace;
+$font-size-base: 14px;/**/
+
+// Navigation Bar and other links
+$navbar-default-link-color: #005684;
+
+// Containers
+$jumbotron-padding: 2em;
+$jumbotron-bg: rgba( 236, 240, 241, 1 );
+
+// Panels and Wells
+$panel-bg: rgba( 236, 240, 241, 1 );
+$panel-inner-border: rgba( 236, 240, 241, 1 );
+  // Border color for elements within panels
+$panel-border-radius: $border-radius-base;
+$panel-footer-bg: rgba( 0, 86, 132, .15 );
+  // For Panel Default State
+$panel-default-text: rgba( 50, 50, 50, 1 );
+$panel-default-border: rgba( 50, 50, 50, 1 );
+$panel-default-heading-bg: rgba( 0, 86, 132, .15 ); 
+
+  // Wells
+$well-bg: rgba( 0, 86, 132, 0 );
+// bootstrap-sass includes
+// +all custom hacks to bootstrapp CSS above here
+
+@import "bootstrap";
+  
+// Custom SASS CSS
+// Custom Site SASS Variables
+
+$blue-logo-color: rgba( 0, 86, 132, 1 ); // #005684
+$green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
+$green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
+$grey-forty-percent: rgba( 102, 102, 102, 1 ); // #666666
+
+$shadow-hard: 1px 1px 0 $grey-forty-percent;
+$shadow-soft: 2px 2px 2px $grey-forty-percent;
+
+$text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
+
+$border-top-line: .1875em solid;
+
+$golden-ratio-long: 62.8%;
+$golden-ratio-short: 38.2%;
+
+// Mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}  // .box { @include border-radius(10px); }
+
+
+
+
+
+body {
+  padding-top: 64px;
+} //end body
+  
+  // Images
+  img.image-sm {
+    max-width:  25%;
+    max-height: 25%;
+  }
+  
+  img.image-xsm {
+    max-width:  16%;
+    max-height: 16%;
+  }
+  
+  img.img-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  img.img-margin {
+    display: block;
+    margin-right: 1em;
+  }
+  
+  img.img-styling-basic {
+    border: #111 solid 1px;
+    box-shadow: #000 1px 1px 0;
+    border-radius: 6px;
+  }
+
+  
+    // Forms
+  
+  .form-group {
+    font-size: .75em;
+  }
+  
+  .form-field-inline {
+    display: inline;
+    max-width: 65%;
+  }
+  
+  .submit-inline {
+    max-width: 15%;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="label"] {
+    font-size: 12px;
+    height: auto;
+    margin-bottom: 0px;
+    padding: 5px 6px;
+  }
+  
+  .btn {
+    border-width: .25em;
+  }
+  
+  .request-registration-code {
+  font-size: .8125em;
+  }
+  
+  // Dividers
+  .div-border-top-blue-ratio {
+    border-top: $border-top-line $blue-logo-color;
+    max-width: $golden-ratio-long;
+    display: block;
+    margin: 1em auto;
+  }
+
+// Navigation & Link Default Resets
+  // Nav-bar
+  .navbar {
+    @include border-radius(0px);
+  }
+
+  .navbar-brand {
+    font-weight: bolder;
+  }
+
+ 
+// Home Page Sections
+  // Billboard
+  #billboard {
+    color: #262626;
+    display: block;
+    margin-top: 64px;
+    margin-bottom: 2em;
+    min-height: 418px;
+    
+    .home-slate {
+      min-height: 582px;
+      padding-top: 2em;
+      
+      h1 {
+      font-size: 3.875em;
+      font-weight: bolder;
+      color: $blue-logo-color;
+      text-transform: none;
+      font-style: italic;
+      }
+      
+      h2 {
+      font-size: 8em;
+      font-weight: bolder;
+      color: $green-darker-logo-color;
+      text-shadow:$shadow-hard;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      }
+      
+      h3 {
+      font-size: 2em;
+      color: $grey-forty-percent;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      }
+      
+    }
+  }
+
+  offering {
+    
+    
+    
+    
+  }
+  
+  // Benefits-Article
+  
+  .benefits-article {
+    text-align: left;
+    line-height: 1.1875 !important;
+    display: block;
+    width: 99%;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: .1875em solid #005684;
+  
+  }
+  
+  // Home Page About Section
+
+  .section-box {
+    margin: 2em 0 0 0;
+    padding: 2em;
+    @include border-radius(.25em);
+    box-shadow: $shadow-hard;
+    border:  #333 1px solid;
+  }
+
+  .about-section {
+    background-color: rgba( 40, 185, 154, .05 ); // 
+    
+    .founders {
+      display: block;
+      margin: 0 0 1em 0;
+      text-align: left;
+    
+      p {
+        margin: 0;
+        padding-left: 1em;
+      }
+    }
+    
+    .name-hilite {
+      font-size: 1.125em;
+      color: $blue_logo_color; 
+      font-style: italic;
+      
+    }
+  }
+  
+  
+  // Home Page Badges Section
+  .badges-section {
+    background-color: rgba( 0, 0, 0, .05 ); // 
+    
+  }
+  
+  .badges-section {
+    
+  }
+  
+  .badges-section {
+    
+  }
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    // Footer
+  .footer-site {
+    color: $text-light-logo-blue;
+    font-size: .625em;
+  
+  
+    a {
+      color: $text-light-logo-blue;
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      text-decoration: none;
+    }
+  
+  }
+  
+  
