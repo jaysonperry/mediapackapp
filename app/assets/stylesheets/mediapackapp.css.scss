@@ -73,6 +73,19 @@ $golden-ratio-short: 38.2%;
 
 body {
   padding-top: 64px;
+  background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.5, #5B7B95),
+	color-stop(1, #2C3E50),
+	color-stop(1, #415E72)
+  );
+  background-image: -o-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
+  background-image: -moz-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
+  background-image: -webkit-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
+  background-image: -ms-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
+  background-image: linear-gradient(to top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
 } //end body
   
   // Images
@@ -163,6 +176,14 @@ body {
     font-weight: bolder;
   }
 
+// Box, Wraps & Containers 
+    .section-box {
+      margin: 2em 0 0 0;
+      padding: 2em;
+      @include border-radius(.25em);
+      box-shadow: $shadow-hard;
+      border:  #333 1px solid;
+    }
  
 // Home Page Sections
   // Billboard
@@ -204,85 +225,86 @@ body {
     }
   }
 
-  #offering {
+  #fold {
     
-    padding: 2em 3em;
+    padding: 0;
+    font-size: 1.25em;
     
-    h3 {
-      font-size: 2em;
-      font-weight: bolder;
-      color: #005684;
-      /*text-shadow: .0625em .0625em 0 #000000*/
+    #offering {
+      
+      #headingOffering {
+        padding: 2em 4em;
+        text-align: center;
+      }
+      
+      h3 {
+        font-size: 2,25em;
+        font-weight: bolder;
+        color: $blue-logo-color;
+        /*text-shadow: .0625em .0625em 0 #000000*/
+      }
+      
     }
     
-    
-    
-  }
-  
   // Benefits-Article
+    
+    #benefits {
+      padding: 2em 4em;
+      
+      .row {
+        padding-right: 3em;
+        margin-top: 1em;
+        padding-top: 1em;
+      }
+      
+      .benefits-article {
+        text-align: left;
+        line-height: 1.1875 !important;
+        display: block;
+        margin-right: 3em;
+        margin-top: 1em;
+        padding-top: 1em;
+      
+      }
+    }
+    // Home Page About Section
   
-  #benefits {
-    
-    .row {
-     
-    }
-    
-    .benefits-article {
-      text-align: left;
-      line-height: 1.1875 !important;
-      display: block;
-      width: 99%;
-      margin-top: 1em;
-      padding-top: 1em;
-      border-top: .1875em solid #005684;
-    
-    }
-  }
-  // Home Page About Section
 
-  .section-box {
-    margin: 2em 0 0 0;
-    padding: 2em;
-    @include border-radius(.25em);
-    box-shadow: $shadow-hard;
-    border:  #333 1px solid;
-  }
-
-  .about {
-    background-color: rgba( 40, 185, 154, .05 ); // 
-    @include border-radius(0px);
+  
+    .about {
+      background-color: rgba( 40, 185, 154, .05 ); // 
+      @include border-radius(0px);
+      padding: 1.5em;
     
-    .row {
-      margin-bottom: 2em;
-    }
-    
-    .founders {
-      display: block;
-      margin: 0 0 1em 0;
-      text-align: left;
-    
-      p {
-        margin: 0;
-        padding-left: 1em;
+      .row {
+        margin-bottom: 2em;
+      }
+      
+      .founders {
+        display: block;
+        text-align: left;
+      
+        p {
+          margin: 0;
+        }
+      }
+      
+      .name-hilite {
+        font-size: 1.125em;
+        color: $blue_logo_color; 
+        font-style: italic;
+        
       }
     }
     
-    .name-hilite {
-      font-size: 1.125em;
-      color: $blue_logo_color; 
-      font-style: italic;
-      
+    
+    // Home Page Badges Section
+    .badges {
+      background-color: rgba( 0, 0, 0, .05 ); // 
+      @include border-radius(0px);
+      padding: 1.5em;
     }
   }
-  
-  
-  // Home Page Badges Section
-  .badges {
-    background-color: rgba( 0, 0, 0, .05 ); // 
-    @include border-radius(0px);
-    padding: 1.5em
-  }
-  
     
   
   
