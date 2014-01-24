@@ -1,12 +1,13 @@
 Mediapackapp::Application.routes.draw do
 
   devise_for :users
+  
   root 'welcome#home'
     get 'plans' => 'welcome#plans'
     get 'terms' => 'welcome#terms'
     get 'guides' => 'welcome#guides'
     
-    match ':controller(/:action(/:id))', :via => :get
+    
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

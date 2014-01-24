@@ -1,18 +1,37 @@
-<h2>Sign up</h2>
+<div class="panel-narrow">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1>Sign up</h1>
+    </div>
+    <div class="panel-body">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+      <div class="form-box-1">
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email, :autofocus => true %></div>
+      
+        <div><%= f.label :password %> <em>(minimum 8 character)</em><br />
+        <%= f.password_field :password %></div>
+      
+        <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %></div>
+        
+        <div>
+          <%= f.label :registration_code %> <em>*</em><br />
+          <%= f.text_field :reg_code %>
+        </div>
+      
+        <div><%= f.submit "Sign up" %></div>
+        </div>
+      <% end %>
+      
+      <div class="div-border-top-blue-ratio">
+        <p><em>*</em> If you do not have a Registration Code and would like one, please request a Registration Code <strong><%= link_to "here.", "http://eepurl.com/MjSBv" %></strong></p>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>

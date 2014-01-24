@@ -86,6 +86,11 @@ body {
     max-height: 16%;
   }
   
+  img.image-md {
+    max-width:  $golden-ratio-long;
+    max-height: $golden-ratio-long;
+  }
+  
   img.img-center {
     margin-left: auto;
     margin-right: auto;
@@ -129,10 +134,13 @@ body {
     padding: 5px 6px;
   }
   
-  .btn {
-    border-width: .25em;
-  }
-  
+  // Buttons
+.btn-basic {
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,.9);
+  border: .25em solid #005684;
+  box-shadow: $shadow-soft;
+}
   .request-registration-code {
   font-size: .8125em;
   }
@@ -163,11 +171,11 @@ body {
     display: block;
     margin-top: 64px;
     margin-bottom: 2em;
-    min-height: 418px;
-    
+      
     .home-slate {
       min-height: 582px;
-      padding-top: 2em;
+      padding-top: 2.5em;
+      text-align: center;
       
       h1 {
       font-size: 3.875em;
@@ -196,8 +204,16 @@ body {
     }
   }
 
-  offering {
+  #offering {
     
+    padding: 2em 3em;
+    
+    h3 {
+      font-size: 2em;
+      font-weight: bolder;
+      color: #005684;
+      /*text-shadow: .0625em .0625em 0 #000000*/
+    }
     
     
     
@@ -205,17 +221,23 @@ body {
   
   // Benefits-Article
   
-  .benefits-article {
-    text-align: left;
-    line-height: 1.1875 !important;
-    display: block;
-    width: 99%;
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: .1875em solid #005684;
-  
+  #benefits {
+    
+    .row {
+     
+    }
+    
+    .benefits-article {
+      text-align: left;
+      line-height: 1.1875 !important;
+      display: block;
+      width: 99%;
+      margin-top: 1em;
+      padding-top: 1em;
+      border-top: .1875em solid #005684;
+    
+    }
   }
-  
   // Home Page About Section
 
   .section-box {
@@ -226,8 +248,13 @@ body {
     border:  #333 1px solid;
   }
 
-  .about-section {
+  .about {
     background-color: rgba( 40, 185, 154, .05 ); // 
+    @include border-radius(0px);
+    
+    .row {
+      margin-bottom: 2em;
+    }
     
     .founders {
       display: block;
@@ -250,18 +277,12 @@ body {
   
   
   // Home Page Badges Section
-  .badges-section {
+  .badges {
     background-color: rgba( 0, 0, 0, .05 ); // 
-    
+    @include border-radius(0px);
+    padding: 1.5em
   }
   
-  .badges-section {
-    
-  }
-  
-  .badges-section {
-    
-  }
     
   
   

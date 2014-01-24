@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
   def guides
   end
   
-  def new_guides
+  def pricing
     redirect_to( :controller => 'welcome', :action => 'plans' )
   end
   
