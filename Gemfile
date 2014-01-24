@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 1.2'
 # Develper added gems
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem "devise", "~> 3.2.2"
+gem "rails_admin", "~> 0.6.0"
+
 
 
 # Groups
