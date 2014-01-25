@@ -1,0 +1,98 @@
+
+<div class="panel panel-primary">
+  
+  <div class="panel-heading">
+    <h1>Fact Sheet</h1>
+  </div>
+  
+  <div class="panel-body">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Vanity url</th>
+          <th>Country</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Middle initial</th>
+          <th>P k a</th>
+          <th>Professional business type</th>
+          <th>Client tel mobile</th>
+          <th>Client tel work</th>
+          <th>Client tel alt</th>
+          <th>Client email alt</th>
+          <th>Client url</th>
+          <th>Client street address 1</th>
+          <th>Client street address 2</th>
+          <th>Client unit number</th>
+          <th>Client city</th>
+          <th>Client county</th>
+          <th>Client state</th>
+          <th>Client postal code</th>
+          <th>Company name</th>
+          <th>Company tel main</th>
+          <th>Company url</th>
+          <th>Company email</th>
+          <th>Company street address 1</th>
+          <th>Company street address 2</th>
+          <th>Company suite number</th>
+          <th>Company city</th>
+          <th>Company county</th>
+          <th>Company state</th>
+          <th>Company postal code</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @fact_sheets.each do |fact_sheet| %>
+          <tr>
+            <td><%= fact_sheet.vanity_url %></td>
+            <td><%= fact_sheet.country %></td>
+            <td><%= fact_sheet.first_name %></td>
+            <td><%= fact_sheet.last_name %></td>
+            <td><%= fact_sheet.middle_initial %></td>
+            <td><%= fact_sheet.p_k_a %></td>
+            <td><%= fact_sheet.professional_business_type %></td>
+            <td><%= fact_sheet.client_tel_mobile %></td>
+            <td><%= fact_sheet.client_tel_work %></td>
+            <td><%= fact_sheet.client_tel_alt %></td>
+            <td><%= fact_sheet.client_email_alt %></td>
+            <td><%= fact_sheet.client_url %></td>
+            <td><%= fact_sheet.client_street_address_1 %></td>
+            <td><%= fact_sheet.client_street_address_2 %></td>
+            <td><%= fact_sheet.client_unit_number %></td>
+            <td><%= fact_sheet.client_city %></td>
+            <td><%= fact_sheet.client_county %></td>
+            <td><%= fact_sheet.client_state %></td>
+            <td><%= fact_sheet.client_postal_code %></td>
+            <td><%= fact_sheet.company_name %></td>
+            <td><%= fact_sheet.company_tel_main %></td>
+            <td><%= fact_sheet.company_url %></td>
+            <td><%= fact_sheet.company_email %></td>
+            <td><%= fact_sheet.company_street_address_1 %></td>
+            <td><%= fact_sheet.company_street_address_2 %></td>
+            <td><%= fact_sheet.company_suite_number %></td>
+            <td><%= fact_sheet.company_city %></td>
+            <td><%= fact_sheet.company_county %></td>
+            <td><%= fact_sheet.company_state %></td>
+            <td><%= fact_sheet.company_postal_code %></td>
+            <td><%= link_to 'Show', fact_sheet %></td>
+            <td><%= link_to 'Edit', edit_fact_sheet_path(fact_sheet) %></td>
+            <td><%= link_to 'Destroy', fact_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+    <br>
+    
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'New Fact sheet', new_fact_sheet_path %>
+  </div>
+
+</div>  
+

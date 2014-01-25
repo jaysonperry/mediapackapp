@@ -177,13 +177,17 @@ body {
   }
 
 // Box, Wraps & Containers 
-    .section-box {
-      margin: 2em 0 0 0;
-      padding: 2em;
-      @include border-radius(.25em);
-      box-shadow: $shadow-hard;
-      border:  #333 1px solid;
-    }
+  .section-box {
+    margin: 2em 0 0 0;
+    padding: 2em;
+    @include border-radius(.25em);
+    box-shadow: $shadow-hard;
+    border:  #333 1px solid;
+  }
+    
+  .panel-narrow {
+  width: $golden-ratio-long;
+  }
  
 // Home Page Sections
   // Billboard

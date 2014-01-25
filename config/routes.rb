@@ -1,5 +1,7 @@
 Mediapackapp::Application.routes.draw do
 
+  resources :fact_sheets
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
   

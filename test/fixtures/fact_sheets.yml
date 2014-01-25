@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vanity_url: MyString
+  country: MyString
+  first_name: MyString
+  last_name: MyString
+  middle_initial: MyString
+  p_k_a: MyString
+  professional_business_type: MyString
+  client_tel_mobile: MyString
+  client_tel_work: MyString
+  client_tel_alt: MyString
+  client_email_alt: MyString
+  client_url: MyString
+  client_street_address_1: MyString
+  client_street_address_2: MyString
+  client_unit_number: MyString
+  client_city: MyString
+  client_county: MyString
+  client_state: MyString
+  client_postal_code: MyString
+  company_name: MyString
+  company_tel_main: MyString
+  company_url: MyString
+  company_email: MyString
+  company_street_address_1: MyString
+  company_street_address_2: MyString
+  company_suite_number: MyString
+  company_city: MyString
+  company_county: MyString
+  company_state: MyString
+  company_postal_code: MyString
+
+two:
+  vanity_url: MyString
+  country: MyString
+  first_name: MyString
+  last_name: MyString
+  middle_initial: MyString
+  p_k_a: MyString
+  professional_business_type: MyString
+  client_tel_mobile: MyString
+  client_tel_work: MyString
+  client_tel_alt: MyString
+  client_email_alt: MyString
+  client_url: MyString
+  client_street_address_1: MyString
+  client_street_address_2: MyString
+  client_unit_number: MyString
+  client_city: MyString
+  client_county: MyString
+  client_state: MyString
+  client_postal_code: MyString
+  company_name: MyString
+  company_tel_main: MyString
+  company_url: MyString
+  company_email: MyString
+  company_street_address_1: MyString
+  company_street_address_2: MyString
+  company_suite_number: MyString
+  company_city: MyString
+  company_county: MyString
+  company_state: MyString
+  company_postal_code: MyString

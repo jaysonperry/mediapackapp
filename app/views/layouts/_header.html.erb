@@ -26,7 +26,15 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Go To<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to 'My Dashboard', "#" %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'My Dashboard', "#" %></li>
+              <li><%= link_to 'Fact Sheet', "#" %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Guides', guides_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+               <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+            <% else %>
             <li><%= link_to 'Home', root_path %></li>
             <li class="divider"></li>
             <li><%= link_to 'Guides', guides_path %></li>
@@ -34,10 +42,6 @@
             <li><%= link_to 'Plans', plans_path %></li>
             <li><%= link_to "Terms", terms_path %></li>
             <li class="divider"></li>
-            <% if user_signed_in? %>
-              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-               <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-            <% else %>
               <li><%= link_to "Sign up", new_user_registration_path %></li>
               <li><%= link_to "Sign in", new_user_session_path %></li>
             <% end %>
