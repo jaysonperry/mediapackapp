@@ -12,149 +12,144 @@
   <% end %>
 
   <h3>Required</h3>
+  <div class="div-border-thin-blue-ratio"></div>
+  <p>These five questions are needed to generate your Dashboard and Basic EPK Template.</p>
+  <div class="div-border-thin-blue-ratio"></div>
   
-  <div class="form-group">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name, :class => 'form-control', :placeholder => 'enter first name', :autofocus => true %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :middle_initial %> (<em>not required!</em>)<br>
-    <%= f.text_field :middle_initial, :class => 'form-control', :placeholder => 'enter last name', :autofocus => false %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name, :class => 'form-control', :placeholder => 'enter last name', :autofocus => false %>
-  </div>
-  
+  <section class="row"> 
+    <div class="form-group col-xs-12 col-md-5">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, :class => 'form-control', :placeholder => 'enter first name', :autofocus => true %>
+    </div>
     
-  <div class="form-group">
-    <%= f.label :project_url %><br>
-    <%= f.text_field :vanity_url, :class => 'form-control', :placeholder => 'enter project url name', :autofocus => false %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :country %><br>
-    <%= f.text_field :country, :class => 'form-control', :placeholder => 'enter your country', :autofocus => false %>
-  </div>
-  <div>
+    <div class="form-group col-xs-12 col-md-7">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, :class => 'form-control', :placeholder => 'enter last name', :autofocus => false %>
+    </div>
+  </section>
+  <div class="div-border-thin-blue-ratio"></div>
+    <div class="form-group">
+      <%= f.label :username %>
+      <div class="row">
+        <div class="col-md-5 col-xs-12">
+          <p class="url-pattern-example-condensed">http://www.entreuse.com/</p>
+        </div>
+        <div class="col-md-7 col-xs-12"><%= f.text_field :vanity_url, :class => 'form-control col-md-6', :placeholder => 'enter project url name', :autofocus => false %>
+        </div>
+      </div>  
+    </div>
+  <div class="div-border-thin-blue-ratio"></div>
+      
+  <section class="row">
+    <div class="form-group col-md-5 col-xs-12">
+      <%= f.label :city_or_town %>
+      <%= f.text_field :client_city, :class => 'form-control', :placeholder => 'enter your city or town', :autofocus => false %>
+    </div>
+    <div class="form-group col-md-7 col-xs-12">
+      <%= f.label :country %>
+      <%= f.text_field :country, :class => 'form-control', :placeholder => 'enter your country', :autofocus => false %>
+    </div>
+  </section>
+  <div class="div-border-thin-blue-ratio"></div>
+  <div class="text-right">
     <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-basic' %>
   </div>
-  <div class="div-border-top-blue-ratio"></div>
+  <div class="div-border-thick-blue-full"></div>
   
   <h3>Recommended (<em>Highly!</em>)</h3>
-  
-  
-  <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :class => 'form-control', :placeholder => 'enter brief description of your project.', :autofocus => false %>
+  <div class="div-border-thin-blue-ratio"></div>
+  <p>You may return to your Fact Sheet at anytime to add or change any item (or remove any of the Recommended Facts).</p>
+  <div class="div-border-thin-blue-ratio"></div>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :description %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.text_area :description, :class => 'form-control', :placeholder => 'enter brief description of your project.', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :professionally_know_as %><br>
-    <%= f.text_field :p_k_a, :class => 'form-control', :placeholder => 'enter professional name', :autofocus => false %>
+  <div class="form-group row">
+      <div class="col-md-3 col-xs-12">
+        <%= f.label :professional_name %>
+      </div>
+      <div class="col-md-9 col-xs-12">
+        <%= f.text_field :p_k_a, :class => 'form-control', :placeholder => 'enter professional name', :autofocus => false %>
+      </div>
   </div>
-  <div class="form-group">
-    <%= f.label :my_profession_is %><br>
-    <%= f.text_field :professional_business_type, :class => 'form-control', :placeholder => 'enter your professional title', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :my_profession_is %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.text_field :professional_business_type, :class => 'form-control', :placeholder => 'enter your professional title', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :telephone %> (<em>mobile</em>)<br>
-    <%= f.telephone_field :client_tel_mobile, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :telephone %> (<em>mobile</em>)
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.telephone_field :client_tel_mobile, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
+    </div>
   </div>
-  
-  
-  
-  
-  <div class="form-group">
-    <%= f.label :telephone %> (<em>work</em>)<br>
-    <%= f.telephone_field :client_tel_work, :class => 'form-control', :placeholder => 'enter work/office number', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :email %> (<em>alternate</em>)
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.email_field :client_email_alt, :class => 'form-control', :placeholder => 'enter alternate email', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :telephone %> (<em>alternate</em>)<br>
-    <%= f.telephone_field :client_tel_alt, :class => 'form-control', :placeholder => 'enter alternate telephone', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :personal_or_project_url %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.url_field :client_url, :class => 'form-control', :placeholder => 'enter full url i.e. http://www.bettyjane.com', :autofocus => false %>
+    </div>
+  </div>  
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :telephone %> (<em>work</em>)
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.telephone_field :client_tel_work, :class => 'form-control', :placeholder => 'enter work/office number', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :email %> (<em>alternate</em>)<br>
-    <%= f.email_field :client_email_alt, :class => 'form-control', :placeholder => 'enter alternate email', :autofocus => false %>
+    <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :company_name %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.text_field :company_name, :class => 'form-control', :placeholder => 'enter company name', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :personal_or_project_url %><br>
-    <%= f.url_field :client_url, :class => 'form-control', :placeholder => 'enter full url i.e. http://www.bettyjane.com', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :company_tel_main %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.text_field :company_tel_main, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :street_address_1 %><br>
-    <%= f.text_field :client_street_address_1, :class => 'form-control', :placeholder => 'enter street address 1', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :company_url %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.url_field :company_url, :class => 'form-control', :placeholder => 'enter company url on the web', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :street_address_2 %><br>
-    <%= f.text_field :client_street_address_2, :class => 'form-control', :placeholder => 'enter street address 2', :autofocus => false %>
+  <div class="form-group row">
+    <div class="col-md-3 col-xs-12">
+      <%= f.label :company_email %>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <%= f.email_field :company_email, :class => 'form-control', :placeholder => 'enter company email', :autofocus => false %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :unit_number %> (<em>apt/suite/room...</em>)<br>
-    <%= f.text_field :client_unit_number, :class => 'form-control', :placeholder => 'enter unit mobile number', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :city_or_town %><br>
-    <%= f.text_field :client_city, :class => 'form-control', :placeholder => 'enter your city or town', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :county %><br>
-    <%= f.text_field :client_county, :class => 'form-control', :placeholder => 'enter your country/nation', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :state %> - province or region<br>
-    <%= f.text_field :client_state, :class => 'form-control', :placeholder => 'enter your state, province or region', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :zip %> or Postal Code<br>
-    <%= f.text_field :client_postal_code, :class => 'form-control', :placeholder => 'enter your zip or postal code', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_name %><br>
-    <%= f.text_field :company_name, :class => 'form-control', :placeholder => 'enter company name', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_tel_main %><br>
-    <%= f.text_field :company_tel_main, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_url %><br>
-    <%= f.url_field :company_url, :class => 'form-control', :placeholder => 'enter company url on the web', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_email %><br>
-    <%= f.email_field :company_email, :class => 'form-control', :placeholder => 'enter company email', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_street_address_1 %><br>
-    <%= f.text_field :company_street_address_1, :class => 'form-control', :placeholder => 'enter company street address 1', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company_street_address_2 %><br>
-    <%= f.text_field :company_street_address_2, :class => 'form-control', :placeholder => 'enter company street address 2', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company %> Suite No.<br>
-    <%= f.text_field :company_suite_number, :class => 'form-control', :placeholder => 'enter suite number', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company %> City or Town<br>
-    <%= f.text_field :company_city, :class => 'form-control', :placeholder => 'enter city or town', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company %> County<br>
-    <%= f.text_field :company_county, :class => 'form-control', :placeholder => 'enter county', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company %> State, Province or Region<br>
-    <%= f.text_field :company_state, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
-  </div>
-  <div class="form-group">
-    <%= f.label :company %> Zip or Postal Code<br>
-    <%= f.text_field :company_postal_code, :class => 'form-control', :placeholder => 'enter mobile number', :autofocus => false %>
-  </div>
-  <div class="actions">
+  <div class="div-border-thin-blue-ratio"></div>
+  <div class="text-right">
     <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-basic' %>
   </div>
 <% end %>

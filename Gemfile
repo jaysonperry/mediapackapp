@@ -18,8 +18,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem "devise", "~> 3.2.2"
 gem "rails_admin", "~> 0.6.0"
-
-
+gem "country_select", "~> 1.2.0"
+gem "haml", "~> 4.0.5"
+gem "simple_form", "~> 3.0.1"
 
 # Groups
 

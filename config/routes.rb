@@ -1,5 +1,6 @@
 Mediapackapp::Application.routes.draw do
 
+  get "dashboard/index"
   resources :fact_sheets
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

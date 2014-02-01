@@ -52,7 +52,8 @@ $shadow-soft: 2px 2px 2px $grey-forty-percent;
 
 $text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
 
-$border-top-line: .1875em solid;
+$border-thick-line: 3px solid;
+$border-thin-line: 1px solid;
 
 $golden-ratio-long: 62.8%;
 $golden-ratio-short: 38.2%;
@@ -153,14 +154,40 @@ body {
   color: rgba(0,0,0,.9);
   border: .25em solid #005684;
   box-shadow: $shadow-soft;
+    
+    a:hover {
+      background-color:  rgba(215,215,255,1);
+    }
 }
   .request-registration-code {
   font-size: .8125em;
   }
   
   // Dividers
-  .div-border-top-blue-ratio {
-    border-top: $border-top-line $blue-logo-color;
+  
+  .div-border-thick-blue-full {
+    border-top: $border-thick-line $blue-logo-color;
+    min-width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thick-blue-ratio {
+    border-top: $border-thick-line $blue-logo-color;
+    max-width: $golden-ratio-long;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thin-blue-full {
+    border-top: $border-thin-line $blue-logo-color;
+    min-width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thin-blue-ratio {
+    border-top: $border-thin-line $blue-logo-color;
     max-width: $golden-ratio-long;
     display: block;
     margin: 1em auto;
@@ -187,6 +214,10 @@ body {
     
   .panel-narrow {
   width: $golden-ratio-long;
+  }
+  
+  .panel-center {
+    margin: 0 auto;
   }
  
 // Home Page Sections
@@ -275,7 +306,7 @@ body {
   
 
   
-    .about {
+    #about {
       background-color: rgba( 40, 185, 154, .05 ); // 
       @include border-radius(0px);
       padding: 1.5em;
@@ -284,7 +315,7 @@ body {
         margin-bottom: 2em;
       }
       
-      .founders {
+      .founder {
         display: block;
         text-align: left;
       

@@ -5,7 +5,16 @@ class WelcomeController < ApplicationController
     render( :template => 'welcome/home' )
   end
   
+  def after_sign_up_path_for(welcome)
+    new_fact-sheet
+  end
+
   def home
+    
+    if user_signed_in?
+      redirect_to( :controller => 'dashboard', :action => 'index' )
+    end
+    
   end
 
   def plans

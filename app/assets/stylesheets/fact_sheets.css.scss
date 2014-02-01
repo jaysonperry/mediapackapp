@@ -2,3 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Form Look
+
+.inline-form-label {
+  display: inline-block;
+}
+
+.inline-form-field {
+  display: inline-block;
+}
+
+p.url-pattern-example-condensed {
+  font-size: 1.375em;
+  text-align: right;
+  line-height: 1.75em;
+}
+
