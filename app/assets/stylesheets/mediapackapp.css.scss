@@ -3,6 +3,7 @@
 // Entreuse Application Custom Styling based on Bootstrap-sass
 //
 
+@import "bootstrap";
 
 $brand-primary: #005684;
 $border-radius-base: 6px;
@@ -12,7 +13,11 @@ $text-color: #262626;
 $font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Lucida Console", Monaco, monospace;
-$font-size-base: 14px;/**/
+$font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
+
+// Grid
+  // Padding between columns. Gets divided in half for the left and right.
+
 
 // Navigation Bar and other links
 $navbar-default-link-color: #005684;
@@ -37,7 +42,6 @@ $well-bg: rgba( 0, 86, 132, 0 );
 // bootstrap-sass includes
 // +all custom hacks to bootstrapp CSS above here
 
-@import "bootstrap";
   
 // Custom SASS CSS
 // Custom Site SASS Variables
