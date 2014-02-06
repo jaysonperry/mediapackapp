@@ -3,7 +3,9 @@
 // Entreuse Application Custom Styling based on Bootstrap-sass
 //
 
+@import "entreuse_simple_form";
 @import "bootstrap";
+@import "bootstrap_dropdowns";
 
 $brand-primary: #005684;
 $border-radius-base: 6px;
@@ -21,6 +23,13 @@ $font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
 
 // Navigation Bar and other links
 $navbar-default-link-color: #005684;
+
+// Buttons
+
+$btn-default-bg: rgba( 255, 255, 255, 1 );
+$btn-default-border: $brand-primary;
+$btn-link-disabled-color: rgba( 0, 0, 0, .25 );
+
 
 // Containers
 $jumbotron-padding: 2em;
@@ -72,7 +81,7 @@ $golden-ratio-short: 38.2%;
           border-radius: $radius;
 }  // .box { @include border-radius(10px); }
 
-
+// @import 'bootstrap-responsive';
 
 
 
@@ -156,12 +165,8 @@ body {
 .btn-basic {
   background-color: rgba(255,255,255,1);
   color: rgba(0,0,0,.9);
-  border: .25em solid #005684;
+  border: $border-thin-line $blue-logo-color;
   box-shadow: $shadow-soft;
-    
-    a:hover {
-      background-color:  rgba(215,215,255,1);
-    }
 }
   .request-registration-code {
   font-size: .8125em;

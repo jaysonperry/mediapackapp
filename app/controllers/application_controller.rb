@@ -22,7 +22,7 @@ protected
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-  
+ 
   helper_method :resource, :resource_name, :devise_mapping
-  
+
 end

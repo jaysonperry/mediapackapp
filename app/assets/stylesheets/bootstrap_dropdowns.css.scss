@@ -1,0 +1,41 @@
+// Place all the styles related to the FactSheets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Form Look
+
+  // Background for the dropdown menu.
+$dropdown-bg: #ffffff; 
+
+// Dropdown menu border-color.
+$dropdown-border: rgba(0,0,0,.15); 
+
+// Dropdown menu border-color for IE8.
+$dropdown-fallback-border: #cccccc; 
+
+// Divider color for between dropdown items.
+$dropdown-divider-bg: #e5e5e5; 
+
+// Dropdown link text color.
+$dropdown-link-color: rgba( 0, 0, 0, .75 ); 
+
+// Hover color for dropdown links.
+$dropdown-link-hover-color: darken( $dropdown-link-color, 5%); 
+
+// Hover background for dropdown links.
+$dropdown-link-hover-bg: rgba( 0, 0, 0, .015 ); 
+
+// Active dropdown menu item text color.
+$dropdown-link-active-color: lighten( $dropdown-link-color, 15%); 
+
+// Active dropdown menu item background color.
+$dropdown-link-active-bg: rgba( 0, 0, 0, .015 ); 
+
+// Disabled dropdown menu item background color.
+$dropdown-link-disabled-color: rgba( 0, 0, 0, .5 ); 
+
+// Text color for headers within dropdown menus.
+$dropdown-header-color:  rgba( 0, 0, 0, .5 ); 
+
+
+$dropdown-caret-color: rgba( 0, 0, 0, 1 );

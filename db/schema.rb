@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140124235402) do
+ActiveRecord::Schema.define(version: 20140204223524) do
 
   create_table "fact_sheets", force: true do |t|
     t.string   "vanity_url"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20140124235402) do
     t.datetime "updated_at"
     t.integer  "user_id"
   end
+
+  add_index "fact_sheets", ["vanity_url"], name: "index_fact_sheets_on_vanity_url", unique: true
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
