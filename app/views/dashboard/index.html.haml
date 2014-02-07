@@ -1,12 +1,66 @@
 #dashboard
+  %h1
+    %strong Entreuse
+    %em - Dashboard  
+  .panel  
+    .panel-heading
+      
+      
+    .panel-body
+        
+      .row
+        .col-xs-12.col-sm-6.col-md-5
+          .leadphoto
+            = image_tag "entreuse-e-logo-color.png", :class => "img-rounded", :title => "Column Heading Graphic with Entreuse Logo Graphic"
 
-  - if user_signed_in?
-  
-    .panel
-      %h2.text-center Welcome - @fact_sheet.first_name - to Your - @fact_sheet.vanity_url - Dashboard.
-      .text-center
-        = image_tag "ball-puddle-e-col-hdr-2.png", :title => "Column Heading Graphic with Entreuse Logo Graphic"
-        %h3 Let's get started
-        %p= link_to "Create EPK Factsheet", new_fact_sheet_path, class: "btn btn-default btn-md"
-        %p= link_to "Show/Edit EPK Storyboard", "#", class: "btn btn-default btn-md"
-
+        .col-xs-12.col-sm-6.col-md-7.lead
+          %h4.rubic Productivity Changer
+          %h3.header A Whisper is Worth a Thousend Words
+          %p.blurb
+            Influencing the Influencers to attain your goals. Entreuse is a new type of electronic press kit, or EPK. Entreuse allows individuals and small enterprises with a product or service whether physical or electronically delivered, and who generally do not have regular access to publicity and marketing professional to use some of the tools availible to them. 
+      
+       
+    .panel-footer
+      %h2
+        %em My Campaigns
+        .text-grey-light Coming soon...
+      .coming-soon
+        .row
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body.panel-1
+                %h4 Books
+                %ul
+                  %li list item 1
+                  %li list item 2
+                  %li list item 3
+                  
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body.panel-2
+                %h4 Speaking
+                %ul
+                  %li list item 1
+                  %li list item 2
+                  %li list item 3
+                  
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body.panel-3
+                %h4 Design
+                %ul
+                  %li list item 1
+                  %li list item 2
+                  %li list item 3
+                  
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body.panel-4
+                %h4 Perfomance
+                %ul
+                  %li list item 1
+                  %li list item 2
+                  %li list item 3
+                  
+      %p= link_to "Edit EPK Factsheet", new_fact_sheet_path, class: "btn btn-default btn-md"
+        

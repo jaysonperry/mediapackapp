@@ -47,14 +47,14 @@
     </div>
     <div class="input form-group col-md-7 col-xs-12">
       
-      <%= f.input :country, :class => 'form-control', priority: [ "United States" ] %>
+      <%= f.input :country, :type => 'text', :class => 'form-control', priority: [ "United States" ] %>
      <!-- <%= f.label :country %>
       #<%= f.text_field :country, :class => 'form-control', :placeholder => 'enter your country', :autofocus => false %>-->
     </div>
   </section>
   <div class="div-border-thin-blue-ratio"></div>
   <div class="text-right">
-    <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-basic' %>
+    <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-default' %>
   </div>
   <div class="div-border-thick-blue-full"></div>
   
@@ -152,6 +152,6 @@
   </div>
   <div class="div-border-thin-blue-ratio"></div>
   <div class="text-right">
-    <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-basic' %>
+    <%= f.submit "Create Fact Sheet", class: 'btn btn-sm btn-default' %>
   </div>
 <% end %>

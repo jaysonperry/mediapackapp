@@ -9,9 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= mediapackapp
- *= welcome
- *= dashboard
- *= fact_sheet
+ *= require_entreuse_simple_form
+ *= require_bootstrap
+ *= require_mediapackapp
+ *= require_welcome
+ *= require_dashboard
+ *= require_fact_sheet
  *= require_tree .
  */

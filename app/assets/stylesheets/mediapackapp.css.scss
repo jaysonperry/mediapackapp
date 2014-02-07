@@ -4,10 +4,40 @@
 //
 
 @import "entreuse_simple_form";
-@import "bootstrap";
-@import "bootstrap_dropdowns";
 
-$brand-primary: #005684;
+@import "bootstrap_dropdowns";
+// Custom SASS CSS
+// Custom Site SASS Variables
+
+$blue-logo-color:  rgba( 0, 86, 132, 1 ); // #005684
+$green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
+$green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
+$grey-forty-percent: rgba( 102, 102, 102, 1 ); // #666666
+$white: rgba( 255, 255, 255, 1 ); // #ffffff
+
+$shadow-hard: 1px 1px 0 $grey-forty-percent;
+$shadow-soft: 2px 2px 2px $grey-forty-percent;
+
+$text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
+
+$border-thick-line: 3px solid;
+$border-thin-line: 1px solid;
+
+$golden-ratio-long: 62.8%;
+$golden-ratio-short: 38.2%;
+
+$padding-none: 0px;
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 32px;
+
+$margin-none: 0px;
+$margin-sm: 8px;
+$margin-md: 16px;
+$margin-lg: 32px;
+
+// Bootstrap Direct Hacks
+$brand-primary: $blue-logo-color;
 $border-radius-base: 6px;
 $body-bg: rgba( 44, 62, 88, 1 ); // #2c3e50
 $text-color: #262626;
@@ -17,8 +47,33 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Lucida Console", Monaco, monospace;
 $font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
 
+// Media queries breakpoints
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
 // Grid
   // Padding between columns. Gets divided in half for the left and right.
+
+$gridColumns: 12; 
+$gridGutterWidth: 10px;
+  //Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: $screen-sm-min; 
+  // Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 
 // Navigation Bar and other links
@@ -44,32 +99,17 @@ $panel-footer-bg: rgba( 0, 86, 132, .15 );
   // For Panel Default State
 $panel-default-text: rgba( 50, 50, 50, 1 );
 $panel-default-border: rgba( 50, 50, 50, 1 );
-$panel-default-heading-bg: rgba( 0, 86, 132, .15 ); 
+$panel-default-heading-bg: rgba( 0, 86, 132, .25 ); 
+$panel-footer-bg: rgba( 0, 86, 132, .25 );
+
 
   // Wells
 $well-bg: rgba( 0, 86, 132, 0 );
 // bootstrap-sass includes
 // +all custom hacks to bootstrapp CSS above here
 
-  
-// Custom SASS CSS
-// Custom Site SASS Variables
+  @import "bootstrap";
 
-$blue-logo-color: rgba( 0, 86, 132, 1 ); // #005684
-$green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
-$green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
-$grey-forty-percent: rgba( 102, 102, 102, 1 ); // #666666
-
-$shadow-hard: 1px 1px 0 $grey-forty-percent;
-$shadow-soft: 2px 2px 2px $grey-forty-percent;
-
-$text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
-
-$border-thick-line: 3px solid;
-$border-thin-line: 1px solid;
-
-$golden-ratio-long: 62.8%;
-$golden-ratio-short: 38.2%;
 
 // Mixins
 
@@ -101,7 +141,12 @@ body {
   background-image: -ms-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
   background-image: linear-gradient(to top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
 } //end body
-  
+
+  // Typography
+  .text-grey-light {
+    color: $grey-forty-percent;
+  }
+ 
   // Images
   img.image-sm {
     max-width:  25%;
@@ -131,11 +176,59 @@ body {
   
   img.img-styling-basic {
     border: #111 solid 1px;
-    box-shadow: #000 1px 1px 0;
+    box-shadow: $shadow-hard;
     border-radius: 6px;
   }
 
-  
+  #dashboard {
+    h1 {
+        color: $white;
+      }
+    
+    .panel {
+      .panel-heading {
+        
+      }
+      .lead {
+        
+        .rubic {
+          color: $green-logo-color;
+          
+        }
+        .header {
+          
+        }
+        .blurb {
+          
+        }
+      }
+      
+      .asset-box {
+        border-left:  $border-thin-line $grey-forty-percent;
+      }
+      
+      .coming-soon {
+        .panel-body {
+          &.panel-1 {
+            background-color: #f00;
+          }
+          &.panel-2 {
+            background-color: #0f0;
+            
+          } 
+          &.panel-3 {
+            background-color: #00f;
+            
+          }
+          &.panel-4 {
+            background-color: #f0f;
+            
+          }  
+        
+        }
+      }
+    }
+  }
     // Forms
   
   .form-group {
@@ -162,6 +255,13 @@ body {
   }
   
   // Buttons
+
+.btn-default {
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,.9);
+  // border: $border-thin-line $blue-logo-color;
+  box-shadow: $shadow-soft;
+}
 .btn-basic {
   background-color: rgba(255,255,255,1);
   color: rgba(0,0,0,.9);
@@ -296,7 +396,7 @@ body {
       padding: 2em 4em;
       
       .row {
-        padding-right: 3em;
+        
         margin-top: 1em;
         padding-top: 1em;
       }
@@ -305,7 +405,7 @@ body {
         text-align: left;
         line-height: 1.1875 !important;
         display: block;
-        margin-right: 3em;
+        
         margin-top: 1em;
         padding-top: 1em;
       

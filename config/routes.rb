@@ -1,7 +1,6 @@
 Mediapackapp::Application.routes.draw do
 
-  get "dashboard/index"
-  get 'construct' => 'dashboard#construct'
+  
   
   resources :fact_sheets
 
@@ -13,7 +12,8 @@ Mediapackapp::Application.routes.draw do
     get 'terms' => 'welcome#terms'
     get 'guides' => 'welcome#guides'
     
-    
+    get "dashboard/index"
+    get 'construct' => 'dashboard#construct'
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
