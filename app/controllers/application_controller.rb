@@ -25,4 +25,8 @@ protected
  
   helper_method :resource, :resource_name, :devise_mapping
 
+  def after_sign_in_path_for(user)
+    ((current_user.sign_in_count == 1) ? new_fact_sheet_path : dashboard_index_path )
+  end
+
 end

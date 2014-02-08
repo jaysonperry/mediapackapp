@@ -5,62 +5,64 @@
   .panel  
     .panel-heading
       
-      
     .panel-body
         
       .row
-        .col-xs-12.col-sm-6.col-md-5
+        .col-xs-12.col-sm-6.col-md-6.col-lg-4
           .leadphoto
-            = image_tag "entreuse-e-logo-color.png", :class => "img-rounded", :title => "Column Heading Graphic with Entreuse Logo Graphic"
-
-        .col-xs-12.col-sm-6.col-md-7.lead
-          %h4.rubic Productivity Changer
-          %h3.header A Whisper is Worth a Thousend Words
-          %p.blurb
-            Influencing the Influencers to attain your goals. Entreuse is a new type of electronic press kit, or EPK. Entreuse allows individuals and small enterprises with a product or service whether physical or electronically delivered, and who generally do not have regular access to publicity and marketing professional to use some of the tools availible to them. 
+            = image_tag "entreuse-e-logo-color.png", :class => "img-rounded img-responsive", :title => "Column Heading Graphic with Entreuse Logo Graphic"
+          .btn-group-vertical
+            <button type="button" class="btn btn-default">Create Your EPK Now</button>
+            <button  type="button" class="btn btn-default">Edit Factsheet</button>
+            
+        .col-xs-12.col-sm-6.col-md-6.col-lg-8
+          = image_tag "analytics-mockup-coming-soon.png", :class => "img-rounded img-responsive", :title => "Column Heading Graphic with Entreuse Logo Graphic"
       
-       
     .panel-footer
       %h2
-        %em My Campaigns
-        .text-grey-light Coming soon...
+        %em My Campaigns <small>Coming soon...</small>
+          
       .coming-soon
         .row
           .col-xs-12.col-sm-6.col-md-3
             .panel
-              .panel-body.panel-1
-                %h4 Books
-                %ul
-                  %li list item 1
-                  %li list item 2
-                  %li list item 3
+              .panel-body
+                = image_tag "campaigns-books.png", :class => "img-center img-responsive", :title => "Book Publicity Campaign Workflow"
                   
           .col-xs-12.col-sm-6.col-md-3
             .panel
-              .panel-body.panel-2
-                %h4 Speaking
-                %ul
-                  %li list item 1
-                  %li list item 2
-                  %li list item 3
+              .panel-body
+                = image_tag "campaigns-speaking.png", :class => "img-center img-responsive", :title => "Speaking Publicity Campaign Workflow" 
                   
           .col-xs-12.col-sm-6.col-md-3
             .panel
-              .panel-body.panel-3
-                %h4 Design
-                %ul
-                  %li list item 1
-                  %li list item 2
-                  %li list item 3
+              .panel-body
+                = image_tag "campaigns-design.png", :class => "img-center img-responsive", :title => "Design Publicity Campaign Workflow"
                   
           .col-xs-12.col-sm-6.col-md-3
             .panel
-              .panel-body.panel-4
-                %h4 Perfomance
-                %ul
-                  %li list item 1
-                  %li list item 2
-                  %li list item 3
+              .panel-body
+                = image_tag "campaigns-performance.png", :class => "img-center img-responsive", :title => "Performance Publicity Campaign Workflow"
+        .row
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body
+                = image_tag "campaigns-music.png", :class => "img-center img-responsive", :title => "Music Publicity Campaign Workflow"
                   
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body
+                = image_tag "campaigns-companies.png", :class => "img-center img-responsive", :title => "Company Publicity Campaign Workflow" 
+                  
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body
+                = image_tag "campaigns-events.png", :class => "img-center img-responsive", :title => "Events Publicity Campaign Workflow"
+                  
+          .col-xs-12.col-sm-6.col-md-3
+            .panel
+              .panel-body
+                = image_tag "campaigns-products.png", :class => "img-center img-responsive", :title => "Products Publicity Campaign Workflow"
+          
       %p= link_to "Edit EPK Factsheet", new_fact_sheet_path, class: "btn btn-default btn-md"
         

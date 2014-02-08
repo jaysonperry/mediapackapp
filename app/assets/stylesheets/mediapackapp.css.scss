@@ -208,23 +208,27 @@ body {
       }
       
       .coming-soon {
-        .panel-body {
-          &.panel-1 {
-            background-color: #f00;
+        .panel {
+          background: none;
+          .panel-body {
+             
+            &.panel-1 {
+              background-color: #f00;
+            }
+            &.panel-2 {
+              background-color: #0f0;
+              
+            } 
+            &.panel-3 {
+              background-color: #00f;
+              
+            }
+            &.panel-4 {
+              background-color: #f0f;
+              
+            }  
+          
           }
-          &.panel-2 {
-            background-color: #0f0;
-            
-          } 
-          &.panel-3 {
-            background-color: #00f;
-            
-          }
-          &.panel-4 {
-            background-color: #f0f;
-            
-          }  
-        
         }
       }
     }
