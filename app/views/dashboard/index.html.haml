@@ -8,19 +8,26 @@
     .panel-body
         
       .row
-        .col-xs-12.col-sm-6.col-md-6.col-lg-4
-          .leadphoto
-            = image_tag "entreuse-e-logo-color.png", :class => "img-rounded img-responsive", :title => "Column Heading Graphic with Entreuse Logo Graphic"
-          .btn-group-vertical
-            <button type="button" class="btn btn-default">Create Your EPK Now</button>
-            <button  type="button" class="btn btn-default">Edit Factsheet</button>
-            
-        .col-xs-12.col-sm-6.col-md-6.col-lg-8
+        .col-xs-12.col-sm-12.col-md-6.col-lg-7
+          .row
+            .col-xs-6.col-sm-6.col-md-6.col-lg-7
+              .leadphoto
+                = image_tag "entreuse-e-logo-color.png", :class => "img-rounded img-responsive img-center", :title => "Column Heading Graphic with Entreuse Logo Graphic"
+            .col-xs-6.col-sm-6.col-md-6.col-lg-5
+              %h3 Quick Start <small><em>Here, Now!...</em></small>
+              .btn-group-vertical
+                = link_to "Create Your EPK", "#", :class => "btn btn-default"
+                = link_to "Show EPK", "#", :class => "btn btn-default"
+                = link_to "Edit EPK", "#", :class => "btn btn-default"
+                = link_to "Show Factsheet", "#", :class => "btn btn-default"
+                = link_to "Edit Factsheet", "#", :class => "btn btn-default"
+                
+        .col-xs-12.col-sm-12.col-md-6.col-lg-5
           = image_tag "analytics-mockup-coming-soon.png", :class => "img-rounded img-responsive", :title => "Column Heading Graphic with Entreuse Logo Graphic"
       
     .panel-footer
       %h2
-        %em My Campaigns <small>Coming soon...</small>
+        %em My Campaigns <small>Coming soon. . .</small>
           
       .coming-soon
         .row
@@ -62,7 +69,4 @@
           .col-xs-12.col-sm-6.col-md-3
             .panel
               .panel-body
-                = image_tag "campaigns-products.png", :class => "img-center img-responsive", :title => "Products Publicity Campaign Workflow"
-          
-      %p= link_to "Edit EPK Factsheet", new_fact_sheet_path, class: "btn btn-default btn-md"
-        
+                = image_tag "campaigns-products.png", :class => "img-center img-responsive", :title => "Products Publicity Campaign Workflow" 

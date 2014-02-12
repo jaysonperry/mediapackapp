@@ -447,26 +447,13 @@ body {
     
     
     // Home Page Badges Section
-    .badges {
+    #badges {
       background-color: rgba( 0, 0, 0, .05 ); // 
       @include border-radius(0px);
       padding: 1.5em;
     }
   }
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ 
   
     // Footer
   .footer-site {
@@ -475,12 +462,13 @@ body {
   
   
     a {
-      color: $text-light-logo-blue;
+      color: $text-light-logo-blue !important;
       text-decoration: underline;
     }
     
     a:hover {
       text-decoration: none;
+      background-color: transparent;
     }
   
   }

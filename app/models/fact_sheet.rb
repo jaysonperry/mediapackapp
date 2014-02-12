@@ -6,5 +6,4 @@ class FactSheet < ActiveRecord::Base
 
   validates :first_name, :last_name, :vanity_url, :client_city, :country, presence: true   
 
-
 end
