@@ -78,6 +78,10 @@ Mediapackapp::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   
+  # for webfonts asset pipeline configuration also in config/application.rb and config/enviornments/development.rb
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  config.assets.precompile += %w( .svg .eot .woff .ttf)
+  
   # set for the actual url
   config.action_mailer.default_url_options = { :host => 'http://www.entreuse.com' }
 end

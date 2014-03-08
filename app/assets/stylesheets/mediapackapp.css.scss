@@ -1,5 +1,31 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
 
+//helvetica_neueregular
+@font-face {
+    font-family: 'helveticaneue-ultraligcond';
+    src: url('helveticaneue-ultraligcond-webfont.eot');
+    src: url('helveticaneue-ultraligcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneue-ultraligcond-webfont.woff') format('woff'),
+         url('helveticaneue-ultraligcond-webfont.ttf') format('truetype'),
+         url('helveticaneue-ultraligcond-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//helvetica_neueregular
+@font-face {
+    font-family: 'helveticaneue-ultraligcondobl';
+    src: url('helveticaneue-ultraligcondobl-webfont.eot');
+    src: url('helveticaneue-ultraligcondobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneue-ultraligcondobl-webfont.woff') format('woff'),
+         url('helveticaneue-ultraligcondobl-webfont.ttf') format('truetype'),
+         url('helveticaneue-ultraligcondobl-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 // Entreuse Application Custom Styling based on Bootstrap-sass
 //
 
@@ -12,8 +38,14 @@
 $blue-logo-color:  rgba( 0, 86, 132, 1 ); // #005684
 $green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
 $green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
-$grey-forty-percent: rgba( 102, 102, 102, 1 ); // #666666
+$red-entreuse-color: rgba( 205, 0, 33, 1 ); // #cd0021
+$grey-twenty-percent: rgba( 207, 207, 207, 1 ); // #cfcfcf
+$grey-forty-percent: rgba( 172, 172, 172, 1 ); // #acacac
+$grey-sixty-percent: rgba( 125, 125, 125, 1 ); // #7d7d7d
+$grey-seventyfive-percent: rgba( 85, 85, 85, 1 ); // #7d7d7d
+$grey-border-color: rgba(199, 200, 202, 1);
 $white: rgba( 255, 255, 255, 1 ); // #ffffff
+$black: rgba( 0, 0, 0, 1 ); // #000000
 
 $shadow-hard: 1px 1px 0 $grey-forty-percent;
 $shadow-soft: 2px 2px 2px $grey-forty-percent;
@@ -37,11 +69,12 @@ $margin-md: 16px;
 $margin-lg: 32px;
 
 // Bootstrap Direct Hacks
-$brand-primary: $blue-logo-color;
+$brand-primary: $grey-seventyfive-percent;
 $border-radius-base: 6px;
 $body-bg: rgba( 44, 62, 88, 1 ); // #2c3e50
 $text-color: #262626;
 // basic typography
+$font-family-entreuse-brand: "helveticaneue-ultraligcond", Helvetica, sans-serif;
 $font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Lucida Console", Monaco, monospace;
@@ -77,7 +110,11 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 
 // Navigation Bar and other links
+
+
 $navbar-default-link-color: #005684;
+
+
 
 // Buttons
 
@@ -123,29 +160,55 @@ $well-bg: rgba( 0, 86, 132, 0 );
 
 // @import 'bootstrap-responsive';
 
-
-
 body {
   padding-top: 64px;
+  background-color: $grey-twenty-percent;
+  background-repeat: no-repeat;
   background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.5, #5B7B95),
-	color-stop(1, #2C3E50),
-	color-stop(1, #415E72)
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #EFEFEF),
+    color-stop(1, #FFFFFF)
   );
-  background-image: -o-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
-  background-image: -moz-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
-  background-image: -webkit-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
-  background-image: -ms-linear-gradient(top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
-  background-image: linear-gradient(to top, #5B7B95 50%, #2C3E50 100%, #415E72 100%);
-} //end body
-
+  background-image: -o-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -moz-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -ms-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 100%);
+} 
+  //end body
+  
   // Typography
+  
+  .navbar-brand-font {
+    font-family: $font-family-entreuse-brand;
+    font-size: 36px;
+  }
+  
   .text-grey-light {
     color: $grey-forty-percent;
   }
+  
+    // Headings
+    
+    .rubric {
+      font-family: $font-family-entreuse-brand;
+      line-height: 1.125em;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: $red-entreuse-color;
+      
+      &.rubric-sm {
+      font-size: .1em;
+      text-transform: capitalize;
+      }
+      
+      &.rubric-lg {
+      font-size: 2em;
+      }
+    }
+
  
   // Images
   img.image-sm {
@@ -179,19 +242,78 @@ body {
     box-shadow: $shadow-hard;
     border-radius: 6px;
   }
+  
+  #demos {
+    
+    .epk {
+      padding: 18px 6px;
+      
+      .panel {
+        @include border-radius(0px);
+        background: $white;
+        padding: 6px;
+        margin: 0;
+        
+        .epk-content {
+            margin: 0;
+            border: 1px solid $grey-border-color;
+          
+          .shout-panel {
+            background-color: $grey-border-color;
+            color: $white;
+            display: block;
+            padding: 18px;
+            margin: 0;
+            text-align: center;
+          }
+          
+          .epk-locker-display {
+            margin: 0;
+            padding: 0 18px;
+            border-right: 1px solid $grey-border-color;
+            
+            
+          }
+          
+          .epk-heading {
+            margin: 0 -18px;
+            padding: 18px;
+            border-bottom: 1px solid $grey-border-color;
+            
+            h2 {
+              line-height: .75em !important;
+            }
+            
+            p {
+              
+            }
+            
+          }
+          
+          .rackmount {
+            margin: auto 6px;
+            padding: 0 18px;
+          }
+        }
+      }
+    }
+  }
 
   #dashboard {
     h1 {
-        color: $white;
+        color: $text-color;
       }
     
     .panel {
+      background: none;
+      
       .panel-heading {
+      background: none;
         
       }
       .lead {
         
-        .rubic {
+        .rubric {
           color: $green-logo-color;
           
         }
@@ -202,12 +324,33 @@ body {
           
         }
       }
+    .panel-footer {
+      position: relative;
+      
+      .panel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba( 0, 0, 0, .5)
+      }
+      h2 {
+        position: absolute;
+        top: 16px;
+        left: 32px;
+        z-index: 2;
+        color: $white;
+      }
+    }
       
       .asset-box {
         border-left:  $border-thin-line $grey-forty-percent;
       }
       
       .coming-soon {
+        padding-top: 48px;
         .panel {
           background: none;
           .panel-body {
@@ -457,12 +600,12 @@ body {
   
     // Footer
   .footer-site {
-    color: $text-light-logo-blue;
+    color: $blue-logo-color;
     font-size: .625em;
   
   
     a {
-      color: $text-light-logo-blue !important;
+      color: $blue-logo-color !important;
       text-decoration: underline;
     }
     

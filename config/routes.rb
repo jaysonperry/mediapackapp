@@ -1,7 +1,7 @@
 Mediapackapp::Application.routes.draw do
 
-  
-  
+  resources :epks
+
   resources :fact_sheets
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -11,9 +11,15 @@ Mediapackapp::Application.routes.draw do
     get 'plans' => 'welcome#plans'
     get 'terms' => 'welcome#terms'
     get 'guides' => 'welcome#guides'
+    get 'demos' => 'welcome#demos'
     
     get "dashboard/index"
     get 'construct' => 'dashboard#construct'
+  
+  
+  
+  # Universal default to index.html of 
+  match ':controller(/:action(/:id(.:format)))', :via => :get
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -22,5 +22,9 @@ module Mediapackapp
     
     # for devise
     config.assets.initialize_on_precompile = false
+    
+    # for asset path config
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.precompile += %w( .svg .eot .woff .ttf)
   end
 end

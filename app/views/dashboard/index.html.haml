@@ -1,7 +1,9 @@
 #dashboard
   %h1
-    %strong Entreuse
-    %em - Dashboard  
+    %strong
+      %em
+        fact_sheet.vanity_url 
+        Dashboard
   .panel  
     .panel-heading
       
@@ -10,10 +12,10 @@
       .row
         .col-xs-12.col-sm-12.col-md-6.col-lg-7
           .row
-            .col-xs-6.col-sm-6.col-md-6.col-lg-7
+            .col-xs-6.col-sm-6.col-md-6.col-lg-6
               .leadphoto
-                = image_tag "entreuse-e-logo-color.png", :class => "img-rounded img-responsive img-center", :title => "Column Heading Graphic with Entreuse Logo Graphic"
-            .col-xs-6.col-sm-6.col-md-6.col-lg-5
+                = image_tag "campaign-media-kit.png", :class => "img-responsive img-center", :title => "Column Heading Graphic with Entreuse Logo Graphic"
+            .col-xs-6.col-sm-6.col-md-6.col-lg-6
               %h3 Quick Start <small><em>Here, Now!...</em></small>
               .btn-group-vertical
                 = link_to "Create Your EPK", "#", :class => "btn btn-default"
@@ -28,6 +30,7 @@
     .panel-footer
       %h2
         %em My Campaigns <small>Coming soon. . .</small>
+      .panel-overlay
           
       .coming-soon
         .row

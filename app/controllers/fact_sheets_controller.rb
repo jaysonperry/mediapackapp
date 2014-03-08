@@ -19,6 +19,7 @@ class FactSheetsController < ApplicationController
 
   # GET /fact_sheets/1/edit
   def edit
+    
   end
 
   # POST /fact_sheets

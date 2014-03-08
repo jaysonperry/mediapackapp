@@ -1,0 +1,29 @@
+<h1>Listing epks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @epks.each do |epk| %>
+      <tr>
+        <td><%= epk.name %></td>
+        <td><%= epk.user_id %></td>
+        <td><%= link_to 'Show', epk %></td>
+        <td><%= link_to 'Edit', edit_epk_path(epk) %></td>
+        <td><%= link_to 'Destroy', epk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Epk', new_epk_path %>
